@@ -27,6 +27,17 @@ public class ConexionBD2 {
             String objetoBD = "{call usp_clientes (?,?,?,?,?,?,?)}";
             con = conexion();
             cst = con.prepareCall(objetoBD);
+            // INSERTAR - ACTUALIZAR - ELIMINAR
+//            cst.setInt(1, 1);
+//            cst.setInt(2, 7);
+//            cst.setString(3, "Carlos Antonio");
+//            cst.setString(4, "Av. Tupac 1402");
+//            cst.setString(5, "999888777");
+//            cst.setString(6, "carlos.antonio@gmail.com");
+//            LocalDate fechaRegistro = LocalDate.now();
+//            cst.setDate(7, java.sql.Date.valueOf(fechaRegistro));
+//            rs = cst.executeQuery();
+            //CONSULTAR
             cst.setInt(1, 3);
             cst.setInt(2, 0);
             cst.setString(3, "");

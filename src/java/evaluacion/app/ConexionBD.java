@@ -24,17 +24,42 @@ public class ConexionBD {
             String objetoBD = "{call usp_veterinarios (?,?,?,?,?,?)}";
             con = conexion();
             cst = con.prepareCall(objetoBD);
-            cst.setInt(1, 3);
-            cst.setInt(2, 0);
-            cst.setString(3, "");
-            cst.setString(4, "");
-            cst.setString(5, "");
-            cst.setString(6, "");
+//            // CONSULTAR
+//            cst.setInt(1, 3);
+//            cst.setInt(2, 0);
+//            cst.setString(3, "");
+//            cst.setString(4, "");
+//            cst.setString(5, "");
+//            cst.setString(6, "");
+//            rs = cst.executeQuery();
+//            while (rs.next()) {
+//                System.out.println(
+//                        "\nId: " + rs.getInt("id_veterinario") + "\nNombre: " + rs.getString("nombre") + "\nEspecialidad: " + rs.getString("especialidad"));
+//            }
+//            // INSERTAR
+//            cst.setInt(1, 1);
+//            cst.setInt(2, 7);
+//            cst.setString(3, "Dr Joseph Diaz");
+//            cst.setString(4, "Dentista");
+//            cst.setString(5, "91964578");
+//            cst.setString(6, "joseph.diaz@gmail.com");
+//            rs = cst.executeQuery();
+            // ACTUALIZAR
+            cst.setInt(1, 4);
+            cst.setInt(2, 7);
+            cst.setString(3, "Dr Joseph Diaz");
+            cst.setString(4, "Dermatologo");
+            cst.setString(5, "91964578");
+            cst.setString(6, "joseph.diaz@gmail.com");
             rs = cst.executeQuery();
-            while (rs.next()) {
-                System.out.println(
-                        "\nId: " + rs.getInt("id_veterinario") + "\nNombre: " + rs.getString("nombre") + "\nEspecialidad: " + rs.getString("especialidad"));
-            }
+//            // ELIMINAR
+//            cst.setInt(1, 5);
+//            cst.setInt(2, 7);
+//            cst.setString(3, "");
+//            cst.setString(4, "");
+//            cst.setString(5, "");
+//            cst.setString(6, "");
+//            rs = cst.executeQuery();
 
         } catch (Exception ex) {
             System.out.println("Error : " + ex.getMessage());
